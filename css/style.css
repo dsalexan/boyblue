@@ -1,0 +1,280 @@
+/*!
+ * Start Bootstrap - One Page Wonder (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+ :root{
+   --selected-color: #4169e1;
+   --gradient-black: rgba(0,0,0,0.8); /*var(--gradient-grey)*/
+   --gradient-transparent: rgba(0,0,0,0.2); /*var(--gradient-grey)*/
+ }
+
+header#wall {
+  background: url('../images/wall_background.jpg') no-repeat center center scroll;
+  background-size: 100% auto;
+  background-position-y: 0;
+  height: 100vh;
+}
+
+header#wall>.overlay {
+  padding: 5rem 0;
+  text-align: center;
+  /*background: rgba(0, 0, 0, 0.6);*/
+  height: 100vh;
+}
+
+.grad_grey_to_transparent{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f4c6b+0,606c88+100&1+0,0+100 */
+  background: -moz-linear-gradient(left, var(--gradient-black) 0%, var(--gradient-transparent) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, var(--gradient-black) 0%, var(--gradient-transparent) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, var(--gradient-black) 0%, var(--gradient-transparent) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#00606c88',GradientType=1 ); /* IE6-9 */
+}
+
+#wall nav{
+  width: 85%;
+}
+
+#wall nav ul{
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  width: 100%;
+}
+
+#wall nav a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+#wall li.nav-item{
+  color: #DDD;
+  font-family: "Roboto";
+  font-weight: 200;
+  padding-top: 21px;
+  padding-bottom: 10px;
+  border-bottom: solid 6px transparent;
+}
+
+#wall li.nav-item:hover{
+  font-weight: 600;
+  color:white;
+  border-color: white;
+}
+
+#wall li.active{
+  border-color: royalblue;
+  color: white;
+  font-weight: 600;
+}
+
+#wall li.active:hover{
+  border-color: royalblue;
+}
+
+#wall li.brand{
+  border: none;
+}
+
+#wall li.brand{
+  height: 18em;
+  width: auto;
+}
+
+section#panel{
+  /*height: 500px;*/
+  background: #CCC;
+}
+
+#panel .container{
+  width: 80%;
+}
+
+#panel .slot{
+  padding-top: 5px;
+  padding-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#panel .slot:first-of-type{
+  background: #BBB;
+}
+
+#panel .slot:nth-of-type(2), #panel .slot:last-of-type{
+  background: #AAA;
+}
+
+#panel .slot:nth-of-type(3){
+  background: #999;
+}
+
+
+#panel .slot:hover{
+  background: #00577a;
+}
+
+#panel .slot .title{
+  font-size: 30px;
+  font-family: "Georgia";
+  color: black;
+  line-height: 0.7em;
+  padding-top: 6.3em;
+}
+
+#panel .slot:hover .title{
+  color: #EEE;
+}
+
+#panel .slot .text{
+  text-align: left;
+  padding: 1.3em 1.75em 1em 1.75em;
+  font-size: 14px;
+  line-height: 1em;
+  color: #CCC;
+  visibility: hidden;
+}
+
+#panel .slot:hover .text{
+  visibility: visible;
+}
+
+#panel .slot .label{
+  color: #666;
+  visibility: visible;
+
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+#panel .slot:hover .label{
+  visibility: hidden;
+}
+
+#panel .slot .circle{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #DDD;
+  border: solid 7px #CCC;
+  padding: 10px;
+  margin: 1em auto 0.5em auto;
+}
+
+#panel .slot:hover .circle{
+  background: #EEE;
+  border-color: #182e37;
+}
+
+
+section#display{
+  background: url('../images/display_background.jpg') no-repeat center center scroll;
+  background-size: 100% auto;
+  background-position-y: 90%;
+  height: 100vh;
+
+  
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#display>.overlay {
+  padding: 20vh 0;
+  text-align: center;
+  /*background: rgba(0, 0, 0, 0.6);*/
+  height: 100vh;
+
+  
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#display .container{
+  width: 80%;
+  padding: 0;
+}
+
+#display .title-box{
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 99px;
+  color: #DDD;
+  line-height: 0.7;
+  text-align: left;
+  letter-spacing: -0.06em;
+  padding-bottom: 25px;
+  border-bottom: solid 12px #EEE;
+}
+
+#display .title>span{
+  color: royalblue;
+}
+
+#display .title:nth-of-type(2){
+  padding-left: 0.125em;
+}
+
+#display .text{
+  font-family: "Lato";
+  color: #CCC;
+  text-align: justify;
+  text-justify: newspaper;
+  font-size: 15px;
+  padding: 25px 0;
+}
+
+section#contact {
+  height: 600px;
+  background: #CCC;
+  position: relative;
+}
+
+#contact>.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: 5%;
+  background: royalblue;
+}
+
+#contact .form-contato{
+  min-height: 100%;
+}
+
+#contact .container{
+  width: 80%;
+}
+
+
+
+
+
+.centralize{
+  height: 100%;
+  min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.img-fluid-height{
+  max-height: 100%;
+  width: auto;
+}
