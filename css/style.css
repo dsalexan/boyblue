@@ -238,27 +238,61 @@ section#display{
 
 section#contact {
   height: 600px;
-  background: #CCC;
+  background: #EEE;
   position: relative;
 }
 
-#contact>.overlay{
+#contact>.overlay:first-of-type{
   position: absolute;
   top: 0;
   left: 0;
   height: inherit;
-  width: 5%;
+  width: 2.5%;
   background: royalblue;
+}
+
+#contact>.overlay:last-of-type{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: inherit;
+  width: 35%;
+  background: #999;
 }
 
 #contact .form-contato{
   min-height: 100%;
+  
 }
 
 #contact .container{
   width: 80%;
 }
 
+#contact .form-row{
+  width: 100%;
+}
+
+#contact .form-row > input,
+#contact .form-row > textarea,
+#contact .form-row > select{
+  width: 100%;
+}
+
+footer{
+  height: 150px;
+  background: #202020;
+  position: relative;
+}
+
+footer > .overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  background: #343434;
+  height: 100%;;
+}
 
 
 
