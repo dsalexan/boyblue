@@ -5,9 +5,13 @@
  */
 
  :root{
+   --older-blue: #063253;
+   --current-blue: var(--older-blue);
    --selected-color: #4169e1;
    --gradient-black: rgba(0,0,0,0.8); /*var(--gradient-grey)*/
    --gradient-transparent: rgba(0,0,0,0.2); /*var(--gradient-grey)*/
+   --ectm-jr-background-color: #CCC;
+   --ectm-jr-triangle-height: 3.6vh;
  }
 
 header#wall {
@@ -15,6 +19,19 @@ header#wall {
   background-size: 100% auto;
   background-position-y: 0;
   height: 100vh;
+  position: relative;
+}
+
+header#wall:after{
+  position: absolute;
+  bottom: 0;
+  height: .5em;
+  width: 100%;  
+  background: #202020;
+  display: block;
+  z-index: 1000;
+  /*content: "";*/
+  cursor: pointer;
 }
 
 header#wall>.overlay {
@@ -84,6 +101,193 @@ header#wall>.overlay {
   height: 18em;
   width: auto;
 }
+
+
+section#ectm-jr{
+  background: #CCC;
+  height: 100vh;
+  position: relative;
+}
+
+section#ectm-jr:before{
+  position: absolute;
+  top: 0;
+  height: .5em;
+  width: 100%;
+  background: #202020;
+  display: block;
+  z-index: 1000;/*
+  content: "";*/
+  cursor: pointer;
+}
+
+#ectm-jr .faixa{
+  background: var(--current-blue);
+  position: relative;
+  height: 38vh;
+}
+
+#ectm-jr .faixa::before{
+  /*background: url('../images/UNIFESP2.jpg') no-repeat center center scroll;*/
+  background-size: 100% auto;
+  background-position-y: 55%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+
+#ectm-jr .triangle{
+  height: var(--ectm-jr-triangle-height);
+  position: relative;
+  margin-top: calc(var(--ectm-jr-triangle-height) * -1);
+  line-height: 1;
+}
+
+#ectm-jr .triangle > div:first-of-type,
+#ectm-jr .triangle > div:last-of-type{
+  background: var(--ectm-jr-background-color);
+  width: calc(50% - var(--ectm-jr-triangle-height));
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+}
+#ectm-jr .triangle > div:first-of-type{
+  left:0;
+}
+#ectm-jr .triangle > div:last-of-type{
+  right: 0;
+}
+
+#ectm-jr .triangle > div:nth-of-type(2),
+#ectm-jr .triangle > div:nth-last-of-type(2){
+  position: absolute;
+  display: inline-block;
+  
+  width: 0; 
+  height: 0; 
+  border-left: var(--ectm-jr-triangle-height) solid transparent;
+  border-right: var(--ectm-jr-triangle-height) solid transparent;
+  
+  border-bottom: var(--ectm-jr-triangle-height) solid var(--ectm-jr-background-color);
+}
+
+#ectm-jr .triangle > div:nth-of-type(2){
+  left: calc(50% - var(--ectm-jr-triangle-height) - var(--ectm-jr-triangle-height));
+}
+
+#ectm-jr .triangle > div:nth-last-of-type(2){
+  left: calc(50% + 0em);
+}
+
+#ectm-jr .triangle > div:nth-of-type(3){
+  position: absolute;
+  display: inline-block;
+  left: calc(50% - var(--ectm-jr-triangle-height));
+  
+  width: 0; 
+  height: 0; 
+  border-left: var(--ectm-jr-triangle-height) solid transparent;
+  border-right: var(--ectm-jr-triangle-height) solid transparent;
+  
+  border-top: var(--ectm-jr-triangle-height) solid transparent;
+}
+
+#ectm-jr .faixa > div{
+  padding: 3em 0 5em 0;
+  text-align: center;
+}
+#ectm-jr .faixa .title{
+  margin: 0 auto;
+  color: #DDD;
+  font-size: 1.3em;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#ectm-jr .faixa .title span{
+  font-weight: 400;
+  color: #BBB;
+}
+
+#ectm-jr .faixa .title:after{
+  content: "-------";
+  color: transparent;
+  height: 1px;
+  padding-top: 0.2em;
+  display: inline-block;
+  border-bottom: 2px solid #ccc;
+}
+
+#ectm-jr .faixa .text{
+  width: 60%;
+  margin: 0 auto;
+  color: #DDD;
+  font-family: 'Cardo';
+  font-size: 0.9em;
+  text-align: justify;
+  text-align-last: center;
+}
+
+#ectm-jr .text-blocks{
+  width: 80%;
+  margin: 0 auto;
+  height: 58.4vh !important;
+  min-height: 58.4vh !important;
+}
+
+#ectm-jr .text-blocks .block{
+  padding: 0 !important;
+  position: relative;
+}
+
+#ectm-jr .text-blocks .block:after{
+  content: "";
+  display: block;
+  height: 95%;
+  margin-top: calc(50% - 47.5%);
+  border-left: 0.2em solid var(--current-blue);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#ectm-jr .text-blocks .block:last-of-type:after{
+  border: 0;
+}
+
+#ectm-jr .text-blocks .block .block-title{
+  text-align: left;
+  font-family: 'Lato';
+  width: 100%;
+  font-weight: bold;
+  color: var(--current-blue);
+  text-transform: uppercase;
+  font-size: 1.25em;
+  padding-bottom: 0.75em;
+  padding-left: 3.5em;
+}
+
+#ectm-jr .text-blocks .block .block-title > div > span{
+  font-weight: 400;
+}
+
+#ectm-jr .text-blocks .block .block-text{
+  text-align: justify;
+  font-family: "Merriweather";
+  text-align-last: left;
+  color: #555;
+  font-size: 0.85em;
+  padding: 0 2.5em;
+}
+
 
 section#panel{
   /*height: 500px;*/
