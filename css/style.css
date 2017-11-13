@@ -277,15 +277,16 @@ section#projetos{
 #projetos .box .display{
   padding: 0.4em 0.75em;
   background: #666;
-  color: #111;
+  color: #191919;
   font-weight: 600;
   font-family: 'Lato';
 }
 
 
 
+
 section#clientes{
-  background: #111;
+  background: #191919;
   height: 100vh;
   position: relative;
 }
@@ -308,6 +309,8 @@ section#clientes{
 }
 
 #clientes .title-border{
+  border-top-width: 5em;
+  border-bottom-width: 13em;
 }
 
 #clientes .section-title p:nth-of-type(1){
@@ -330,222 +333,266 @@ section#clientes{
   padding: 0;
 }
 
-#clientes .client-box{
-  height: 160px;
-  width: 160px;
-  background: red;
-}
-
-
-section#panel{
-  /*height: 500px;*/
-  background: #CCC;
-}
-
-#panel .container{
-  width: 80%;
-}
-
-#panel .slot{
-  padding-top: 5px;
-  padding-bottom: 15px;
-  text-align: center;
-  cursor: pointer;
-}
-
-#panel .slot:first-of-type{
-  background: #BBB;
-}
-
-#panel .slot:nth-of-type(2), #panel .slot:last-of-type{
-  background: #AAA;
-}
-
-#panel .slot:nth-of-type(3){
-  background: #999;
-}
-
-
-#panel .slot:hover{
-  background: #00577a;
-}
-
-#panel .slot .title{
-  font-size: 30px;
-  font-family: "Georgia";
-  color: black;
-  line-height: 0.7em;
-  padding-top: 6.3em;
-}
-
-#panel .slot:hover .title{
-  color: #EEE;
-}
-
-#panel .slot .text{
-  text-align: left;
-  padding: 1.3em 1.75em 1em 1.75em;
-  font-size: 14px;
-  line-height: 1em;
-  color: #CCC;
-  visibility: hidden;
-}
-
-#panel .slot:hover .text{
-  visibility: visible;
-}
-
-#panel .slot .label{
-  color: #666;
-  visibility: visible;
-
+#clientes .boxes-holder .arrow{
+  top: 0;
+  color: #999;
+  background: #111;
+  font-size: 2em;
   position: absolute;
-  top:0;
-  right: 0;
+  height: 100%;
+  padding: 0 0.5em;
+  cursor: pointer;
+
+  -ms-transform: skew(5deg); /* IE 9 */
+  -webkit-transform: skew(5deg); /* Safari */
+  transform: skew(5deg); /* Standard syntax */
 }
 
-#panel .slot:hover .label{
-  visibility: hidden;
+#clientes .boxes-holder .arrow:first-of-type{
+  left: -2em;
 }
 
-#panel .slot .circle{
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background: #DDD;
-  border: solid 7px #CCC;
-  padding: 10px;
-  margin: 1em auto 0.5em auto;
+#clientes .boxes-holder .arrow:last-of-type{
+  right: -2em;
 }
 
-#panel .slot:hover .circle{
-  background: #EEE;
-  border-color: #182e37;
+#clientes .boxes-holder .arrow:hover{
+  background: #000;
+  color: #EEE;
+  text-shadow: 0 0 0.2em white;
+}
+#clientes .boxes-holder .arrow-inactive{
+  cursor: initial;
 }
 
-
-section#display{
-  background: url('../images/display_background.jpg') no-repeat center center scroll;
-  background-size: 100% auto;
-  background-position-y: 90%;
-  height: 100vh;
-
-  
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
+#clientes .boxes-holder .arrow-inactive:hover{
+  background: #111 !important;
+  color: #999 !important;
+  text-shadow: none !important;
 }
 
-#display>.overlay {
-  padding: 20vh 0;
+#clientes .box-row{
+  width: 45%;
   text-align: center;
-  /*background: rgba(0, 0, 0, 0.6);*/
+  /*background: blue;*/
+}
+
+#clientes .client-box{
+  height: 15em;
+  width: 15em;
+  display: inline-block;
+  background: rgba(255,255,255,0.6);
+}
+
+#clientes .client-box:nth-child(2){
+  margin-top: 5em;
+}
+
+#clientes .box-inactive{
+  visibility: hidden;
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  width: 0;
+}
+
+
+
+
+section#competencias{
   height: 100vh;
-
-  
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
-
-#display .container{
-  width: 80%;
-  padding: 0;
-}
-
-#display .title-box{
-  font-family: "Roboto";
-  font-weight: 600;
-  font-size: 99px;
-  color: #DDD;
-  line-height: 0.7;
-  text-align: left;
-  letter-spacing: -0.06em;
-  padding-bottom: 25px;
-  border-bottom: solid 12px #EEE;
-}
-
-#display .title>span{
-  color: royalblue;
-}
-
-#display .title:nth-of-type(2){
-  padding-left: 0.125em;
-}
-
-#display .text{
-  font-family: "Lato";
-  color: #CCC;
-  text-align: justify;
-  text-justify: newspaper;
-  font-size: 15px;
-  padding: 25px 0;
-}
-
-section#contact {
-  height: 600px;
-  background: #EEE;
   position: relative;
+  background: #DDD;
 }
 
-#contact>.overlay:first-of-type{
+#competencias .title-border{
+  border-top-width: 11em;
+  border-bottom-width: 5em;
+
+  margin-left: 0;
+  margin-right: 1.2em;
+}
+
+#competencias .section-title p:nth-of-type(1){
+  margin-left: -0.7em;
+} 
+
+#competencias .section-title p:nth-of-type(2){
+  margin-left: -0.2em;
+} 
+
+#competencias .section-title p:nth-of-type(3){
+  margin-left: 0.6em;
+} 
+
+
+
+
+
+section#eventos{
+  height: 100vh;
+  position: relative;
+  background: #222;
+}
+
+#eventos .title-border{
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+
+  border-top-width: 1.5em;
+  border-bottom-width: 5.75em;
+  position: absolute;
+  margin-top: -7.1em;
+}
+
+#eventos .section-title{
+  color: #DDD;
+}
+
+#eventos .section-title p:nth-of-type(1){
+  margin-left: -1em;
+} 
+
+#eventos .section-title p:nth-of-type(2){
+  margin-left: -0.2em;
+} 
+
+#eventos .section-title p:nth-of-type(3){
+  margin-left: 0.7em;
+} 
+
+#eventos .event-box{
+  height: 25%;
+}
+
+
+
+
+section#contato{
+  height: calc(100vh - 150px);
+  background: #DDD;
+}
+
+#contato .overlay{
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  height: inherit;
-  width: 2.5%;
-  background: royalblue;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 
-#contact>.overlay:last-of-type{
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: inherit;
-  width: 35%;
-  background: #999;
+#contato .title-border{
+  margin-left: 0;
+  margin-right: 1.5em;
+
+  border-top-width: 6em;
+  border-bottom-width: 2em;
 }
 
-#contact .form-contato{
-  min-height: 100%;
-  
+#contato .section-title p:nth-of-type(1){
+  margin-left: 0em;
+} 
+
+#contato .section-title p:nth-of-type(2){
+  margin-left: -0.2em;
+} 
+
+#contato .section-title p:nth-of-type(3){
+  margin-left: 0.7em;
 }
 
-#contact .container{
-  width: 80%;
+#contato .form{
+  width: 50%;
+  position: relative;
+  margin-left: 25%;
+  padding: 0 5%;
+  background: #BBB;
 }
 
-#contact .form-row{
-  width: 100%;
+#contato .info{
+  position: relative;
+  width: 30%;
+  padding: 0 5%;
+  background: #CCC;
 }
 
-#contact .form-row > input,
-#contact .form-row > textarea,
-#contact .form-row > select{
-  width: 100%;
-}
+
+
+
+
 
 footer{
   height: 150px;
-  background: #202020;
+  background: red;
   position: relative;
+  color: #BBB;
+  letter-spacing: 0;
 }
 
-footer > .overlay{
+footer .site-map{
+  height: 100%;
+  width: 70%;
+  background: #202020;
   position: absolute;
-  top: 0;
-  right: 0;
+  left: 0;
+  text-align: left;
+}
+
+footer .site-map .links{
+  font-size: 1.em;
+}
+
+footer .site-map .links a{
+  text-decoration: none;
+  color: #BBB;
+  cursor: pointer;
+}
+
+footer .site-map .links a:hover{
+  color: #FFF;
+  font-weight: 600;
+}
+
+footer .site-map .links a:after{
+  content: "|";
+  color: #999;
+  line-height: 0.9;
+  font-size: 1.2em;
+  padding: 0 0.5em;
+}
+
+footer .site-map .links a:last-child:after{
+  content: "";
+}
+
+footer .site-map .copyright{
+  padding-top: 0.3em;
+  font-size: 0.7em;
+}
+
+footer .site-map .copyright span{
+  padding: 0 0.5em;
+}
+
+footer .follow-us{
+  height: 100%;
   width: 30%;
   background: #343434;
-  height: 100%;;
+  position: absolute;
+  text-align: center;
+  right: 0;
 }
 
+footer .follow-us .label{
+  font-size: 0.85em;
+}
 
 
 
