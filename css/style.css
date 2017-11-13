@@ -104,8 +104,9 @@ header#wall>.overlay {
 
 
 section#ectm-jr{
-  background: #CCC;
+  background: #DDD;
   height: 100vh;
+  padding: 0 5%;
   position: relative;
 }
 
@@ -121,171 +122,218 @@ section#ectm-jr:before{
   cursor: pointer;
 }
 
-#ectm-jr .faixa{
-  background: var(--current-blue);
-  position: relative;
-  height: 38vh;
+
+#ectm-jr .holder-thing{
+  height: 100%; 
+  top: 0;
+  position: absolute;
 }
 
-#ectm-jr .faixa::before{
-  /*background: url('../images/UNIFESP2.jpg') no-repeat center center scroll;*/
-  background-size: 100% auto;
-  background-position-y: 55%;
+#ectm-jr .section-title{
+  font-size: 70px;
+  font-family: 'Roboto';
+  color: #333;
+  line-height: 0.55;
+  font-weight: bold;
+}
+
+#ectm-jr .section-title p:nth-child(2){
+  margin-left: 0.2em;
+}
+
+#ectm-jr .section-title p:nth-child(3){
+  margin-left: -0.15em;
+}
+
+#ectm-jr .title-border{
+  width: 3px;
+  border-top: solid 2em rgba(65, 105, 225, 1);
+  border-bottom: solid 5em rgba(65, 105, 225, 0.3);
+  margin-left: 1.2em;
+}
+
+#ectm-jr .block{
+  padding: 1.25em 0;
+}
+
+#ectm-jr .block-title{
+  color: #346080;
+  font-size: 1.2em;
+  font-weight: 500;
+  /*letter-spacing: -0.05em;*/
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  margin-bottom: 0.5em;
+}
+
+#ectm-jr .block-text{
+  margin: 0 2em;
+  padding: 1em;
+  font-size: 0.9125em;
+  line-height: 1.25;
+  background: #CCC;
+}
+
+
+
+
+.quadro .holder-thing{
+  height: 100%; 
+  top: 0;
+  position: absolute;
+}
+
+.quadro .section-title{
+  font-size: 70px;
+  font-family: 'Roboto';
+  color: #333;
+  line-height: 0.55;
+  font-weight: bold;
+  text-align: center;
+}
+
+.quadro .title-border{
+  width: 3px;
+  border-top: solid 2em rgba(65, 105, 225, 1);
+  border-bottom: solid 5em rgba(65, 105, 225, 0.3);
+  margin-left: 1.2em;
+}
+
+
+
+section#projetos{
+  background: #060606;
+  height: 100vh;
+  /*padding: 0 5% 0 0;*/
+  position: relative;
+}
+
+#projetos .section-title{
+  color: #DDD;
+}
+
+#projetos .title-border{
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+
+  border-top-width: 3.5em;
+  border-bottom-width: 6.75em;
+  position: absolute;
+  margin-top: 5.5em;
+}
+
+#projetos .section-title p:nth-child(1){
+  margin-left: -0.7em;
+}
+
+#projetos .section-title p:nth-child(2){
+  margin-left: 0em;
+}
+
+#projetos .section-title p:nth-child(3){
+  margin-left: 0.3em;
+}
+
+#projetos .box{
+  height: 100%;
+  /*background: red;*/
+  width: 25%;
+  position: absolute;
+  top: 0;
+}
+
+#projetos  .box > div{
+  /*padding: 1em;*/
+}
+
+#projetos .box:before{
   content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
-  opacity: 0.1;
-  
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
+
+  background: url('../images/logo_fundo_escuro.png') no-repeat center center scroll;
+  background-size: auto 70%;
+  background-position-y: 35%;
+
+  opacity: 0.5;
+  border-left: solid 3px #000;
+  border-right: solid 3px #000;
 }
 
-#ectm-jr .triangle{
-  height: var(--ectm-jr-triangle-height);
-  position: relative;
-  margin-top: calc(var(--ectm-jr-triangle-height) * -1);
-  line-height: 1;
+#projetos .box:first-of-type:before{
+  border-left-width: 0;
 }
 
-#ectm-jr .triangle > div:first-of-type,
-#ectm-jr .triangle > div:last-of-type{
-  background: var(--ectm-jr-background-color);
-  width: calc(50% - var(--ectm-jr-triangle-height));
-  display: inline-block;
-  position: absolute;
-  height: 100%;
-}
-#ectm-jr .triangle > div:first-of-type{
-  left:0;
-}
-#ectm-jr .triangle > div:last-of-type{
-  right: 0;
+#projetos .box:last-of-type:before{
+  border-right-width: 0;
 }
 
-#ectm-jr .triangle > div:nth-of-type(2),
-#ectm-jr .triangle > div:nth-last-of-type(2){
-  position: absolute;
-  display: inline-block;
-  
-  width: 0; 
-  height: 0; 
-  border-left: var(--ectm-jr-triangle-height) solid transparent;
-  border-right: var(--ectm-jr-triangle-height) solid transparent;
-  
-  border-bottom: var(--ectm-jr-triangle-height) solid var(--ectm-jr-background-color);
-}
-
-#ectm-jr .triangle > div:nth-of-type(2){
-  left: calc(50% - var(--ectm-jr-triangle-height) - var(--ectm-jr-triangle-height));
-}
-
-#ectm-jr .triangle > div:nth-last-of-type(2){
-  left: calc(50% + 0em);
-}
-
-#ectm-jr .triangle > div:nth-of-type(3){
-  position: absolute;
-  display: inline-block;
-  left: calc(50% - var(--ectm-jr-triangle-height));
-  
-  width: 0; 
-  height: 0; 
-  border-left: var(--ectm-jr-triangle-height) solid transparent;
-  border-right: var(--ectm-jr-triangle-height) solid transparent;
-  
-  border-top: var(--ectm-jr-triangle-height) solid transparent;
-}
-
-#ectm-jr .faixa > div{
-  padding: 3em 0 5em 0;
-  text-align: center;
-}
-#ectm-jr .faixa .title{
-  margin: 0 auto;
-  color: #DDD;
-  font-size: 1.3em;
-  font-family: 'Roboto';
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-#ectm-jr .faixa .title span{
-  font-weight: 400;
-  color: #BBB;
-}
-
-#ectm-jr .faixa .title:after{
-  content: "-------";
-  color: transparent;
-  height: 1px;
-  padding-top: 0.2em;
-  display: inline-block;
-  border-bottom: 2px solid #ccc;
-}
-
-#ectm-jr .faixa .text{
-  width: 60%;
-  margin: 0 auto;
-  color: #DDD;
-  font-family: 'Cardo';
-  font-size: 0.9em;
-  text-align: justify;
-  text-align-last: center;
-}
-
-#ectm-jr .text-blocks{
-  width: 80%;
-  margin: 0 auto;
-  height: 58.4vh !important;
-  min-height: 58.4vh !important;
-}
-
-#ectm-jr .text-blocks .block{
-  padding: 0 !important;
-  position: relative;
-}
-
-#ectm-jr .text-blocks .block:after{
-  content: "";
-  display: block;
-  height: 95%;
-  margin-top: calc(50% - 47.5%);
-  border-left: 0.2em solid var(--current-blue);
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-#ectm-jr .text-blocks .block:last-of-type:after{
-  border: 0;
-}
-
-#ectm-jr .text-blocks .block .block-title{
-  text-align: left;
+#projetos .box .display{
+  padding: 0.4em 0.75em;
+  background: #666;
+  color: #111;
+  font-weight: 600;
   font-family: 'Lato';
-  width: 100%;
-  font-weight: bold;
-  color: var(--current-blue);
-  text-transform: uppercase;
-  font-size: 1.25em;
-  padding-bottom: 0.75em;
-  padding-left: 3.5em;
 }
 
-#ectm-jr .text-blocks .block .block-title > div > span{
-  font-weight: 400;
+
+
+section#clientes{
+  background: #111;
+  height: 100vh;
+  position: relative;
 }
 
-#ectm-jr .text-blocks .block .block-text{
-  text-align: justify;
-  font-family: "Merriweather";
-  text-align-last: left;
-  color: #555;
-  font-size: 0.85em;
-  padding: 0 2.5em;
+#clientes .paralelo{
+  -ms-transform: skew(5deg); /* IE 9 */
+  -webkit-transform: skew(5deg); /* Safari */
+  transform: skew(5deg); /* Standard syntax */
+
+  margin-left: -5%;
+  padding-left: 5%;
+}
+
+#clientes .section-title{
+  color: #DDD;
+
+  -ms-transform: skew(-5deg); /* IE 9 */
+  -webkit-transform: skew(-5deg); /* Safari */
+  transform: skew(-5deg); /* Standard syntax */
+}
+
+#clientes .title-border{
+}
+
+#clientes .section-title p:nth-of-type(1){
+  margin-left: -0.4em;
+} 
+
+#clientes .section-title p:nth-of-type(2){
+  margin-left: 0.2em;
+} 
+
+#clientes .section-title p:nth-of-type(3){
+  margin-left: 0.6em;
+} 
+
+#clientes .row{
+  margin-bottom: 30px;
+}
+
+#clientes .col-md-4{
+  padding: 0;
+}
+
+#clientes .client-box{
+  height: 160px;
+  width: 160px;
+  background: red;
 }
 
 
