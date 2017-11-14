@@ -363,6 +363,8 @@ section#clientes{
 }
 #clientes .boxes-holder .arrow-inactive{
   cursor: initial;
+  /*visibility: hidden;*/
+  opacity: .25;
 }
 
 #clientes .boxes-holder .arrow-inactive:hover{
@@ -472,6 +474,7 @@ section#eventos{
 section#contato{
   height: calc(100vh - 150px);
   background: #DDD;
+  position: relative;
 }
 
 #contato .overlay{
@@ -481,10 +484,12 @@ section#contato{
   top: 0;
   left: 0;
 
+  opacity: 0.4;
+
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
-  background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(left, #999 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -wEebkit-linear-gradient(left, #999 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #999 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 
@@ -513,14 +518,50 @@ section#contato{
   position: relative;
   margin-left: 25%;
   padding: 0 5%;
-  background: #BBB;
+  /*background: #BBB;*/
+}
+
+#contato .form input,
+#contato .form textarea{
+  border: none;
+  width: 100%;
+  margin: 0.2em 0;
+  padding: 0.3em 0.5em;
+  font-size: 0.9em;
+  background: #EEE;
+  color: #000;
+}
+
+#contato .form input[type=button]{
+  background: #333;
+  color: #EEE;
+  padding: 0.75em 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+#contato .form input[type=button]:hover{
+  background: rgba(65, 105, 225, 1);
 }
 
 #contato .info{
   position: relative;
   width: 30%;
   padding: 0 5%;
-  background: #CCC;
+  /*background: #CCC;*/
+}
+
+#contato .info .text{
+  padding: 0.75em 0;
+  font-size: 0.85em;
+}
+
+#contato .info .text:first-of-type{
+  padding-top: 0;
+}
+
+#contato .info .text:last-of-type{
+  padding-bottom: 0;
 }
 
 
