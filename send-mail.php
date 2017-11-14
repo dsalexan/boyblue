@@ -5,10 +5,8 @@
   $assunto = $_POST['assunto'];
 
   $headers = 'From: '.$email;
-  $to = "danilo.salexan@gmail.com";
+  $to = "contato@ectmjr.com.br";
   
-  mail($to,$assunto,$mensagem);
-  echo $nome.", ".$email.", ".$mensagem.", ".$assunto;
-  echo "email sent?";
+  mail($to,$assunto,$mensagem,$headers);
   header('location: index.html#contato');
 ?>
