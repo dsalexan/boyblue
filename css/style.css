@@ -160,8 +160,8 @@ section#ectm-jr:before{
   color: #346080;
   font-size: 1.2em;
   font-weight: 500;
-  /*letter-spacing: -0.05em;*/
-  letter-spacing: 0.1em;
+  letter-spacing: -0.05em;
+  /*letter-spacing: 0.1em;*/
   text-transform: uppercase;
   font-family: 'Montserrat';
   margin-bottom: 0.5em;
@@ -236,6 +236,42 @@ section#projetos{
   margin-left: 0.3em;
 }
 
+#projetos .slider{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  color: #AAA;
+  font-size: 1.5em;
+  display: flex;
+}
+
+#projetos .slider div{
+  background: #111;
+  width: 50%;
+  padding: 0 2em;
+  cursor: pointer;
+  padding-bottom: 0.2em;
+}
+
+#projetos .slider div:hover{
+  background: rgba(65, 105, 225, 0.75);
+  text-shadow: 0 0 7px white;
+  color: white;
+}
+
+#projetos .slider div.inactive{
+  cursor: initial;
+  opacity: 0.55;
+}
+
+#projetos .slider div.inactive:hover{
+  background: #111;
+  text-shadow: none;
+  color: #AAA;
+}
+
 #projetos .box{
   height: 100%;
   /*background: red;*/
@@ -266,12 +302,28 @@ section#projetos{
   border-right: solid 3px #000;
 }
 
-#projetos .box:first-of-type:before{
+#projetos .left-0{
   border-left-width: 0;
+  left: 0;
 }
 
-#projetos .box:last-of-type:before{
+#projetos .left-25{
+  left: 25%;
+}
+
+#projetos .left-50{
+  left: 50%;
+}
+
+#projetos .left-75{
   border-right-width: 0;
+  left: 75%;
+}
+
+#projetos .inactive{
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
 #projetos .box .display{
@@ -408,11 +460,11 @@ section#competencias{
 }
 
 #competencias .title-border{
-  border-top-width: 11em;
-  border-bottom-width: 5em;
+  border-top-width: 6em;
+  border-bottom-width: 3.5em;
 
   margin-left: 0;
-  margin-right: 1.2em;
+  margin-right: 3.2em;
 }
 
 #competencias .section-title p:nth-of-type(1){
@@ -427,7 +479,33 @@ section#competencias{
   margin-left: 0.6em;
 } 
 
+#competencias .comp-box{
+  /*height: 100%;*/
+  width: 25%;
+  position: relative;
+  padding: 1.25em;
+  text-align: justify;
+  text-justify: inter-word;
+  display: inline-block;
+  font-size: 0.9em;
+}
 
+#competencias .comp-box p:before{
+  /*content: "";*/
+  height: 1px;
+  padding-right: 2.5em;
+}
+
+#competencias .box-title{
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 2em;
+  text-align: center;
+  height: 3em !important;
+  min-height: 3em !important;
+  color: #346080;
+}
 
 
 
@@ -514,7 +592,7 @@ section#contato{
 }
 
 #contato .form{
-  width: 50%;
+  width: 55%;
   position: relative;
   margin-left: 25%;
   padding: 0 5%;
@@ -532,7 +610,7 @@ section#contato{
   color: #000;
 }
 
-#contato .form input[type=button]{
+#contato .form input[type=submit]{
   background: #333;
   color: #EEE;
   padding: 0.75em 0;
@@ -540,14 +618,14 @@ section#contato{
   text-transform: uppercase;
 }
 
-#contato .form input[type=button]:hover{
+#contato .form input[type=submit]:hover{
   background: rgba(65, 105, 225, 1);
 }
 
 #contato .info{
   position: relative;
-  width: 30%;
-  padding: 0 5%;
+  width: 35%;
+  padding: 0 0 0 5%;
   /*background: #CCC;*/
 }
 

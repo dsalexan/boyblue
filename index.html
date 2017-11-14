@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="dsalexan">
 
     <title>ECTM Jr</title>
 
@@ -38,7 +38,7 @@
                 <a class="nav-link" href="#clientes">CLIENTES</a>
               </li>
               <li class="nav-item brand">
-                <a class="nav-brand" href="#"><img class="img-fluid-height" src="images/ectm_logo.png"/></a>
+                <a class="nav-brand" href="http:\\www.ectmjr.com.br"><img class="img-fluid-height" src="images/ectm_logo.png"/></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#competencias">COMPETÊNCIAS</a>
@@ -84,7 +84,7 @@
       </div>
     </section>
 
-    <section id="projetos" class="quadro">
+    <section id="projetos" class="quadro" data-slide=3 data-slide-size=5>
       <div style="position: relative; height: 100%;">
         <div class="centralize holder-thing" style="width: 20%; right: 0; background: #111;">
           <div class="section-title">
@@ -96,22 +96,19 @@
         </div>
         <div class="holder-thing" style="width: 80%; left: 0;">
           <div>
-            <div class="box" style="left: 0;">
-              <div style="position: relative;">
-                <div class="display">
-                  <div class="nome">Graph</div>
-                </div>
-                <div class="hover">
-                  <div class="logo-holder"><img src=""></img></div>
-                  <div class="info-holder"></div>
-                </div>
-              </div>
+            <div class="box inactive" data-index=4>
             </div>
-            <div class="box" style="left: 25%;">
+            <div class="box left-0" data-index=3>
             </div>
-            <div class="box" style="left: 50%;">
+            <div class="box left-25" data-index=2>
             </div>
-            <div class="box" style="left: 75%;">
+            <div class="box left-50" data-index=1>
+            </div>
+            <div class="box left-75" data-index=0>
+          </div>
+          <div class="slider">
+            <div id="box-prev" class="arrow" style="text-align: left;" data-acc=1 data-status=1><</div>
+            <div id="box-next" class="arrow inactive" style="text-align: right;" data-acc=-1 data-status=0>></div>
           </div>
         </div>
       </div>
@@ -156,7 +153,7 @@
 
     <section id="competencias" class="quadro">
       <div style="position: relative; height: 100%;">
-        <div class="centralize holder-thing" style="width: 20%; right: 0;">
+        <div class="centralize holder-thing" style="width: 25%; right: 0;">
           <div class="title-border"></div>
           <div class="section-title">
             <p>COM</p>
@@ -165,7 +162,25 @@
             <p>CIAS</p>
           </div>
         </div>
-        <div class="holder-thing" style="width: 80%; left: 0;">
+        <div class="holder-thing centralize" style="width: 70%; left: 5%;">
+          <div style="display: flex; flex-wrap: wrap;">
+            <div class="comp-box">
+              <div class="box-title centralize">Desenvolvimento Web</div>
+              <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Pellen tesque malesuada eleifend dapibus. In luctus nunc odio, sed sagittis sem iaculis id. Morbi vel nisl mattis, interdum dui eget, iaculis massa. Duis feugiat lectus et magna pharetra, ac finibus diam luctus. Sed tincidunt iaculis lacinia.</p><p>Quisque ipsum ante, mollis a tortor ac, porta porttitor lectus. Etiam semper dolor vel eros fermentum, id auctor justo rhoncus.</p>
+            </div>
+            <div class="comp-box">
+              <div class="box-title centralize">Ensaios de Materiais</div>
+              <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Pellen tesque malesuada eleifend dapibus.</p><p>In luctus nunc odio, sed sagittis sem iaculis id. Morbi vel nisl mattis, interdum dui eget, iaculis massa. Duis feugiat lectus et magna pharetra, ac finibus diam luctus.</p><p>Sed tincidunt iaculis lacinia. Quisque ipsum ante, mollis a tortor ac, porta porttitor lectus.</p><p>Etiam semper dolor vel eros fermentum, id auctor justo rhoncus.</p>
+            </div>
+            <div class="comp-box">
+              <div class="box-title centralize">Sistemas Automatizados</div>
+              <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Pellen tesque malesuada eleifend dapibus.</p><p>In luctus nunc odio, sed sagittis sem iaculis id. Morbi vel nisl mattis, interdum dui eget, iaculis massa. Duis feugiat lectus et magna pharetra, ac finibus diam luctus. Sed tincidunt iaculis lacinia. Quisque ipsum ante, mollis a tortor ac, porta porttitor lectus.</p><p>Etiam semper dolor vel eros fermentum, id auctor justo rhoncus.</p>
+            </div>
+            <div class="comp-box">
+              <div class="box-title centralize">Analise de Imagens Médicas</div>
+              <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Pellen tesque malesuada eleifend dapibus. In luctus nunc odio, sed sagittis sem iaculis id. Morbi vel nisl mattis, interdum dui eget, iaculis massa. Duis feugiat lectus et magna pharetra, ac finibus diam luctus. Sed tincidunt iaculis lacinia. Quisque ipsum ante, mollis a tortor ac, porta porttitor lectus. Etiam semper dolor vel eros fermentum, id auctor justo rhoncus.</p>
+            </div>
+          </div>
         </div>
     </section>
 
@@ -204,20 +219,20 @@
         <div class="holder-thing" style="width: 70%; left: 0;">
           <div style="height: 100%; display: flex;">
             <div class="form centralize">
-              <form>
-                <input type="text" placeholder="Nome" id="nome"></input>
-                <input type="text" placeholder="E-mail" id="email"></input>
-                <input type="text" placeholder="Assunto" id="assunto"></input>
-                <textarea placeholder="Mensagem" id="mensagem"></textarea>
-                <input type="button" value="Enviar"></input>
+              <form name="contact-form" method="post" action="send-mail.php">
+                <input type="text" placeholder="Nome" name="nome"></input>
+                <input type="text" placeholder="E-mail" name="email"></input>
+                <input type="text" placeholder="Assunto" name="assunto"></input>
+                <textarea placeholder="Mensagem" name="mensagem"></textarea>
+                <input type="submit" value="Enviar"></input>
               </form>
             </div>
             <div class="info centralize">
               <div>
-                <div class="text">Rodovia Washington Luís, Km 235 – SP 310 Jardim Guanabara CEP 13565-905 | São Carlos, SP</div>
-                <div class="text">+55 (16) 3351 9495</div>
-                <div class="text">contato@catijr.com.br</div>
-                <div class="text">facebook.com/catijr</div>
+                <div class="text">Unidade Parque Tecnológico - Avenida Cesare Mansueto Giulio Lattes, n° 1201 - Eugênio de Mello, CEP: 12247-014</div>
+                <div class="text">(TELEFONE)</div>
+                <div class="text">contato@ectmjr.com.br</div>
+                <div class="text">facebook.com/ectmjr</div>
               </div>
           </div>
         </div>
