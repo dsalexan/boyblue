@@ -14,9 +14,13 @@
    --ectm-jr-triangle-height: 3.6vh;
  }
 
+section{
+  overflow: hidden;
+}
+
 header#wall {
   background: url('../images/wall_background.jpg') no-repeat center center scroll;
-  background-size: 100% auto;
+  background-size: cover;
   background-position-y: 0;
   height: 100vh;
   position: relative;
@@ -50,7 +54,7 @@ header#wall>.overlay {
 }
 
 #wall nav{
-  width: 85%;
+  width: 90%;
 }
 
 #wall nav ul{
@@ -626,7 +630,7 @@ section#eventos{
   left: 0;
   content: "";
 
-  opacity: 0.75;
+  opacity: 1.25;
 }
 
 #eventos .event-box:hover:before{
