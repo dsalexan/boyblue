@@ -97,3 +97,9 @@ $("#competencias .box-next").click(function(){
     $("#competencias .comp-box[data-slide=" + curr + "]").removeClass("inactive");
     // alert('yey, curr=' + curr);
 });
+
+$("#eventos .event-box").hover(function(){
+    $("#eventos .event-box").not(this).addClass("smaller-box");
+}, function(){
+    $("#eventos .event-box").removeClass("smaller-box");
+});
