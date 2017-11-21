@@ -81,3 +81,19 @@ $("#projetos .arrow").click(function(){
     
     reDraw();
 });
+
+$("#competencias .box-next").click(function(){
+    curr = parseInt($("#competencias").attr("data-slide"));
+    size = $("#competencias").data("size");
+
+    if(curr + 1 > size){
+        curr = 1;
+    }else{
+        curr += 1;
+    }
+
+    $("#competencias").attr("data-slide", curr);
+    $("#competencias .comp-box").addClass("inactive");
+    $("#competencias .comp-box[data-slide=" + curr + "]").removeClass("inactive");
+    // alert('yey, curr=' + curr);
+});
