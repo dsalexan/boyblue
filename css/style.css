@@ -531,6 +531,16 @@ section#competencias{
   height: 100vh;
 }
 
+#competencias .borda{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: solid 0 black;
+  border-bottom: solid 0 black;
+  height: 100%;  
+}
+
 #competencias .title-border{
   border-top-width: 6em;
   border-bottom-width: 3.5em;
@@ -555,6 +565,20 @@ section#competencias{
   margin-left: 0.6em;
 } 
 
+#competencias #arrow-back{
+  color: #eee;
+  font-size: 25px;
+  display: inline-block;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+#competencias #arrow-back.disabled{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
 #competencias .play-button{
   position: absolute;
   font-size: 5em;
@@ -574,7 +598,7 @@ section#competencias{
 }
 
 #competencias .boxes{
-  width: 25%;
+  width: 30%;
   margin-left: 7.5%;
   margin-bottom: 7.5%;
   position: absolute;
@@ -587,7 +611,7 @@ section#competencias{
 
 #competencias .box-body{
   width: 100%;
-  padding: 1.75em 3.5em;
+  padding: 1.75em 2.5em;
   background: #DDD;
   font-size: 12px;
   text-align: justify;
@@ -596,7 +620,7 @@ section#competencias{
 
 #competencias .box-title{
   background: rgba(221, 221, 211, 0.85);
-  padding: 1.15em 3em;
+  padding: 1.15em 2em;
   line-height: 1;
   font-size: 0.9em;
   height: auto;
@@ -605,6 +629,36 @@ section#competencias{
   font-weight: 500;
   color: #222;
 }
+
+
+@media (min-width: 1080px){
+  #competencias .boxes{
+    width: 27.5%;
+  }
+
+  #competencias .box-body{
+    padding: 1.75em 3em;
+  }
+
+  #competencias .box-title{
+    padding: 1.15em 2.5em;
+  }
+}
+
+@media (min-width: 1240px){
+  #competencias .boxes{
+    width: 25%;
+  }
+
+  #competencias .box-body{
+    padding: 1.75em 3.5em;
+  }
+
+  #competencias .box-title{
+    padding: 1.15em 3em;
+  }
+}
+
 
 #competencias .box-next{
   background: rgba(43, 114, 179, 0.5);

@@ -103,3 +103,53 @@ $("#eventos .event-box").hover(function(){
 }, function(){
     $("#eventos .event-box").removeClass("smaller-box");
 });
+
+$("#competencias .play-button").click(function(){
+    // DISCLAIMER
+    // USAR ANIMATE NESSE CASO É ZOADO
+    // DEVIA SER TRANSITION, MAS TO NO EMBALO DE JQUERY
+    // MAS SERIO, DEPOIS MUDO PRA TRANSITION // Nov 21th 01:48
+    $("#competencias .boxes").animate({left: "-50%"}, "slow");
+    $("#competencias .section-title").animate({fontSize: "20px"}, "slow");
+    $("#competencias .section-title p").animate({marginBottom: "0.3em"}, "slow");
+    $("#competencias .title-border").animate({
+        borderTopWidth: "4em",
+        borderBottomWidth: "1.5em",
+        marginRight: "1em"
+    }, "slow");
+    $("#competencias .holder-title").animate({
+        height: "25vh",
+        width: "25vh"
+    }, "slow");
+    $("#competencias .borda").animate({
+        borderTopWidth: "6em",
+        borderBottomWidth: "6em"
+    }, "slow", function(){
+        $("#arrow-back").removeClass("disabled");
+    });
+
+    $(this).hide();
+});
+
+$("#arrow-back").click(function(){
+    $("#competencias .boxes").animate({left: "0"}, "slow");
+    $("#competencias .section-title").animate({fontSize: "70px"}, "slow");
+    $("#competencias .section-title p").animate({marginBottom: "1rem"}, "slow");
+    $("#competencias .title-border").animate({
+        borderTopWidth: "6em",
+        borderBottomWidth: "3.5em",
+        marginRight: "2em"
+    }, "slow");
+    $("#competencias .holder-title").animate({
+        height: "100%",
+        width: "22.5%"
+    }, "slow");
+    $("#competencias .borda").animate({
+        borderTopWidth: "0",
+        borderBottomWidth: "0"
+    }, "slow", function(){
+        $("#competencias .play-button").show();
+    });
+
+    $(this).addClass("disabled");
+});
