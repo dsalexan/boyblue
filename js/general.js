@@ -35,7 +35,7 @@ $("#clientes .arrow").click(function(){
 
 });
 
-$("#projetos .arrow").click(function(){
+$("#projetos .arrow").not(".inactive").click(function(){
     if($(this).data("status")==0) return;
 
     acc = $(this).data("acc");

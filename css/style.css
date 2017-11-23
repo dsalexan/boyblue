@@ -39,7 +39,6 @@ header#wall:after{
 }
 
 header#wall>.overlay {
-  padding: 5rem 0;
   text-align: center;
   /*background: rgba(0, 0, 0, 0.6);*/
   height: 100vh;
@@ -54,7 +53,9 @@ header#wall>.overlay {
 }
 
 #wall nav{
-  width: 90%;
+  width: 100%;
+  padding: 0 05%;
+  height: 100%;
 }
 
 #wall nav ul{
@@ -85,6 +86,22 @@ header#wall>.overlay {
   font-weight: 600;
   color:white;
   border-color: white;
+}
+
+#wall li.nav-floating{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.35em 0.5em;
+  margin: 0 2em  0 0;
+  border-bottom-width: 0;
+  background: rgba(33,33,33,0.65);
+  font-weight: 600;
+  color: #BBB;
+}
+
+#wall li.nav-floating:hover{
+  background: rgba(10,66,112,0.65);
 }
 
 #wall li.active{
@@ -284,16 +301,35 @@ section#projetos{
   text-shadow: none;
 }
 
+#projetos.slider-inactive .slider{
+  visibility: hidden;
+  height: 0;
+}
+
+#projetos.slider-inactive .box{
+  height: 100% !important;
+  top: 0 !important;
+}
+
 #projetos .box{
-  height: 100%;
+  height: calc(100% - 2.25em);
   /*background: red;*/
   width: 25%;
   position: absolute;
-  top: 3.5em;
+  top: 2.25em;
+  display: block;
 }
 
 #projetos  .box > div{
-  /*padding: 1em;*/
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+
+#projetos  .box > div > div{
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
 }
 
 #projetos .box:before{
@@ -379,6 +415,45 @@ section#projetos{
   font-family: 'Lato';
 }
 
+#projetos .box .box-body{
+  visibility: hidden;
+  height: 0;
+}
+
+#projetos .box .box-title{
+  background: #161616;
+  color: #DDD;
+  padding: 1em 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.925;
+  visibility: visible;
+  margin: 0 0.1em;
+}
+
+#projetos .box:first-of-type .box-title{
+  margin-left: 0.2em;
+}
+
+#projetos .box:last-of-type .box-title{
+  margin-right: 0.2em;
+}
+
+#projetos .box:hover .box-title{
+  margin: 0em;
+}
+
+#projetos .box:hover .box-body{
+    background: #292929;
+    color: #CCC;
+    padding: 1em 2.25em;
+    font-size: 0.9em;
+    text-align: justify;
+    opacity: 0.95;
+    height: auto;
+  visibility: visible;
+}
 
 
 
@@ -747,6 +822,9 @@ section#eventos{
   cursor: pointer;
   -webkit-transition: height 0.25s, opacity .25s; /* Safari */
   transition: height 0.25s, opacity .25s;
+
+  overflow: hidden;
+  display: block;
 }
 
 #eventos .event-box:before{
@@ -770,24 +848,24 @@ section#eventos{
 }
 
 #eventos .pic2:before{
-  background: url('../images/3se/pic2.jpg') no-repeat center center scroll;
-  background-size: 100% auto;
-  background-position-y: 35%;
-}
-
-#eventos .pic3:before{
   background: url('../images/3se/pic3.jpg') no-repeat center center scroll;
   background-size: 100% auto;
   background-position-y: 35%;
 }
 
-#eventos .pic4:before{
+#eventos .pic3:before{
   background: url('../images/3se/pic4.jpg') no-repeat center center scroll;
   background-size: 100% auto;
-  background-position-y: 30%;
+  background-position-y: 35%;
 }
 
-#eventos .event-box:after{
+#eventos .pic4:before{
+  background: url('../images/ag_efetivacao.jpg') no-repeat center center scroll;
+  background-size: 100% auto;
+  background-position-y: 50%;
+}
+
+#eventos .event-box .after{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
   background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -818,12 +896,54 @@ section#eventos{
   opacity: 1;
 }
 
-#eventos .event-box:hover:after{
+#eventos .event-box:hover .after{
   opacity: 0;
 }
 
 #eventos .event-box.smaller-box:before{
   opacity: 0.4;
+}
+
+#eventos .event-box > div{
+  z-index: 2;
+}
+
+#eventos .event-box .box-title, #eventos .event-box .box-date{
+  top: -10em;
+  opacity: 0;
+  
+  -webkit-transition: all 1.1s; /* Safari */
+  transition: all 1.1s;
+}
+
+#eventos .event-box:hover .box-title, #eventos .event-box:hover .box-date{
+  opacity: 1;
+}
+
+#eventos .event-box .box-title{
+  padding: 0.5em 1.5em;
+  background: rgba(22,22,22,0.85);
+  color: #DDD;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+#eventos .event-box:hover .box-title{
+  top: 1em;
+}
+
+#eventos .event-box .box-date{
+  padding: 0.5em 1.5em;
+  font-size: 0.8em;
+  background: rgba(33, 33, 33, 0.75);
+  color: #DDD;
+  position: absolute;
+}
+
+#eventos .event-box:hover .box-date{
+  top: 5.5em;
 }
 
 
