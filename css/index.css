@@ -1,0 +1,78 @@
+section {
+  overflow: hidden; }
+
+header#wall {
+  background: url("../images/wall_background.jpg") no-repeat center center scroll;
+  background-size: cover;
+  background-position-y: 0;
+  height: 100vh;
+  position: relative; }
+  header#wall:after {
+    position: absolute;
+    bottom: 0;
+    height: .5em;
+    width: 100%;
+    background: #202020;
+    display: block;
+    z-index: 1000;
+    /*content: "";*/
+    cursor: pointer; }
+  header#wall > .overlay {
+    text-align: center;
+    height: 100vh;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+    header#wall > .overlay nav {
+      width: 100%;
+      padding: 0 5%;
+      height: 100%; }
+      header#wall > .overlay nav ul {
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+        width: 100%; }
+        header#wall > .overlay nav ul li {
+          color: #ddd;
+          font-family: "Roboto";
+          font-weight: 200;
+          padding-top: 21px;
+          padding-bottom: 10px;
+          border-bottom: solid 6px transparent;
+          cursor: pointer; }
+          header#wall > .overlay nav ul li:hover {
+            font-weight: 600;
+            color: white;
+            border-color: white; }
+          header#wall > .overlay nav ul li.active {
+            border-color: royalblue;
+            color: white;
+            font-weight: 600; }
+          header#wall > .overlay nav ul li.brand {
+            border: none;
+            height: 18em;
+            width: auto; }
+            header#wall > .overlay nav ul li.brand img {
+              max-height: 100%;
+              width: auto; }
+          header#wall > .overlay nav ul li.nav-floating {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.35em 0.5em;
+            margin: 0 2em  0 0;
+            border-bottom-width: 0;
+            background: rgba(33, 33, 33, 0.65);
+            font-weight: 600;
+            color: #BBB; }
+            header#wall > .overlay nav ul li.nav-floating:hover {
+              background: rgba(10, 66, 112, 0.65); }
+          header#wall > .overlay nav ul li a {
+            text-decoration: inherit;
+            color: inherit; }
