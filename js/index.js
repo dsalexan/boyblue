@@ -97,11 +97,11 @@ $("#competencias .next").click(function(){
     // alert('yey, curr=' + curr);
 });
 
-$("#eventos .event-box").hover(function(){
-    $("#eventos .event-box").not(this).addClass("smaller-box");
-}, function(){
-    $("#eventos .event-box").removeClass("smaller-box");
-});
+// $("#eventos .event-box").hover(function(){
+//     $("#eventos .event-box").not(this).addClass("small-box");
+// }, function(){
+//     $("#eventos .event-box").removeClass("small-box");
+// });
 
 $("#competencias .play-button").click(function(){
     // DISCLAIMER

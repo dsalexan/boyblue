@@ -40,6 +40,8 @@
 
     <?php include('views/competences.php'); ?>
 
+    <?php include('views/events.php'); ?>
+
     <?php include('views/contact.php'); ?>
     
     <?php include('views/footer.php'); ?>

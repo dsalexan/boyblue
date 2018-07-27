@@ -10,18 +10,10 @@
         </div>
         <div class="holder" style="width: 80%; left: 0;">
             <div class="boxes">
-                <div class="box left-0" href="#" target="_blank" data-index=3>
-                    <div>
-                        <div>
-                            <div class="title">Hair Studio</div>
-                            <div class="body">-</div>
-                        </div>
-                    </div>
-                </div>
                 <div class="box left-25" href="#" target="_blank" data-index=2>
                     <div>
                         <div>
-                            <div class="title">Buffet Kids!</div>
+                            <div class="title">EmpreendoWeek</div>
                             <div class="body">-</div>
                         </div>
                     </div>
