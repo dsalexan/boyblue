@@ -81,7 +81,7 @@ $("#projetos .arrow").not(".inactive").click(function(){
     reDraw();
 });
 
-$("#competencias .box-next").click(function(){
+$("#competencias .next").click(function(){
     curr = parseInt($("#competencias").attr("data-slide"));
     size = $("#competencias").data("size");
 
@@ -111,7 +111,7 @@ $("#competencias .play-button").click(function(){
     $("#competencias .boxes").animate({left: "-50%"}, "slow");
     $("#competencias .section-title").animate({fontSize: "20px"}, "slow");
     $("#competencias .section-title p").animate({marginBottom: "0.3em"}, "slow");
-    $("#competencias .title-border").animate({
+    $("#competencias .divider").animate({
         borderTopWidth: "4em",
         borderBottomWidth: "1.5em",
         marginRight: "1em"
@@ -124,17 +124,17 @@ $("#competencias .play-button").click(function(){
         borderTopWidth: "6em",
         borderBottomWidth: "6em"
     }, "slow", function(){
-        $("#arrow-back").removeClass("disabled");
+        $("#competencias .arrow-back").removeClass("disabled");
     });
 
     $(this).hide();
 });
 
-$("#arrow-back").click(function(){
+$("#competencias .arrow-back").click(function(){
     $("#competencias .boxes").animate({left: "0"}, "slow");
     $("#competencias .section-title").animate({fontSize: "70px"}, "slow");
     $("#competencias .section-title p").animate({marginBottom: "1rem"}, "slow");
-    $("#competencias .title-border").animate({
+    $("#competencias .dividers").animate({
         borderTopWidth: "6em",
         borderBottomWidth: "3.5em",
         marginRight: "2em"
@@ -152,3 +152,29 @@ $("#arrow-back").click(function(){
 
     $(this).addClass("disabled");
 });
+
+$('form[name=contact-form]').submit(function(event){
+    $.ajax({
+        url : 'send-mail.php',
+        type : 'POST',
+        data : $(this).serialize(),
+        success : function(data){
+            $('#contato #submit-contact').popup('show');
+            setTimeout(function(){
+                $('#contato #submit-contact').popup('hide');
+            }, 2000);
+        }
+    });
+    
+    event.preventDefault();
+});
+
+$('#contato #submit-contact')
+  .popup({
+    position : 'bottom center',
+    inverted: true,
+    inline: true,
+    popup : $('.custom.popup'),
+    on: 'manual'
+  })
+;

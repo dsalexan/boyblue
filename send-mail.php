@@ -5,6 +5,7 @@
           $_POST['mensagem']; 
   $headers = "From: " . $_POST['email'] . "\r\n";
 
-  mail($to,$subject,$txt,$headers);
-  header('location: index.html#contato');
+  // mail($to,$subject,$txt,$headers);
+  
+  echo 'email sent';
 ?>

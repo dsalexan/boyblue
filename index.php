@@ -34,12 +34,24 @@
 
     <?php include('views/wall.php'); ?>
 
+    <?php include('views/about_us.php'); ?>
+
+    <?php include('views/projects.php'); ?>
+
+    <?php include('views/competences.php'); ?>
+
+    <?php include('views/contact.php'); ?>
+    
+    <?php include('views/footer.php'); ?>
+
     <!-- Bootstrap core JavaScript -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="node_modules/semantic-ui/dist/semantic.min.js"></script>
+    
+    <script src="js/index.js"></script>
 
 </body>
 </html>

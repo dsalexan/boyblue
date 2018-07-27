@@ -15,7 +15,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#competencias">COMPETÊNCIAS</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item disabled">
                         <a class="nav-link" href="#eventos">EVENTOS</a>
                     </li>
                     <li class="nav-item nav-floating">
